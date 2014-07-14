@@ -87,12 +87,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Register Your Interest</h2>
-                    <form>
-                        <div class="form-group"><input type="text" placeholder="name" id="form-element-name">
+                    <form id="register-form">
+                        <div class="form-group"><input type="text" name="name" placeholder="name" id="form-element-name">
                         </div>
-                        <div class="form-group"><input type="email" placeholder="e-mail address" id="form-element-email">
+                        <div class="form-group"><input type="email" name="email" placeholder="e-mail address" id="form-element-email">
                         </div>
-                        <div class="form-group"><input type="tel" placeholder="phone number" id="form-element-tel">
+                        <div class="form-group"><input type="tel" name="tel" placeholder="phone number" id="form-element-tel">
                         </div>
                         <div class="form-group"><input type="submit" name="submit" title="GO" value="GO" class="btn-primary">
                         </div>
@@ -110,12 +110,21 @@
         </div>
     </section>
 
+    <section id="thanks" class="container content-section text-center hidden">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Thanks for your interest</h2>
+            </div>
+        </div>
+    </section>
+
     <div id="map"></div>
 
     <!-- Core JavaScript Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/register.js"></script>
 
     <!-- Google Maps API Key - You will need to use your own API key to use the map feature -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
