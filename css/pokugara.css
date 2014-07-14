@@ -1,0 +1,7 @@
+.form-group input {
+    width: 50%;
+}
+
+.form-group:last-child {
+    padding-bottom: 20px;
+}
