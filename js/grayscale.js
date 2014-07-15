@@ -18,10 +18,11 @@ $(function() {
     });
 });
 
+https://maps.google.co.uk/maps?q=harare&hl=en&ll=-,&spn=0.061132,0.097075&sll=52.8382,-2.327815&sspn=9.936275,24.851074&t=h&hnear=Harare,+Zimbabwe&z=14
 //Google Map Skin - Get more at http://snazzymaps.com/
 var myOptions = {
     zoom: 15,
-    center: new google.maps.LatLng(53.385873, -1.471471),
+    center: new google.maps.LatLng(-17.787348, 31.083841),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true,
     styles: [{
