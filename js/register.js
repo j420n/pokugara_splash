@@ -23,7 +23,7 @@ $(document).ready(function () {
 
         // callback handler that will be called on success
         request.done(function (response, textStatus, jqXHR){
-            $('#register').fadeOut( 1600, function () {
+            $('#register-form').fadeOut( 1600, function () {
                 $("#thanks").removeClass('hidden');
             });
         });
