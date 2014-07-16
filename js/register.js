@@ -20,10 +20,12 @@ $(document).ready(function () {
             data: serializedData
         });
 
+
         // callback handler that will be called on success
         request.done(function (response, textStatus, jqXHR){
-            $("#thanks").removeClass('hidden');
-            $('#register').hide();
+            $('#register').fadeOut( 1600, function () {
+                $("#thanks").removeClass('hidden');
+            });
         });
 
         // callback handler that will be called on failure
