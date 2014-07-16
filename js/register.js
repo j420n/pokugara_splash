@@ -6,7 +6,7 @@ $(document).ready(function () {
             request.abort();
         }
 
-        var $form = $(this);
+        var $form = $('#register-form');
         var $inputs = $form.find("input, select, button, textarea");
         var serializedData = $form.serialize();
 
