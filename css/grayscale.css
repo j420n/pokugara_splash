@@ -120,6 +120,9 @@ a:focus {
 }
 .brand-heading {
   font-size: 40px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .intro-text {
   font-size: 18px;
