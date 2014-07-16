@@ -45,7 +45,6 @@ $(document).ready(function () {
         event.preventDefault();
     }
     $('#register-form').validate({ // initialize the plugin
-        debug: true,
         submitHandler: RegisterInterest,
         rules: {
             name: {
