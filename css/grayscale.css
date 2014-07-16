@@ -228,6 +228,14 @@ a:focus {
     margin-top: 250px;
   }
 }
+#register-form {
+  margin: auto;
+  width: 50%;
+  margin-bottom: 20px;
+}
+.form-control {
+  margin-bottom: 12px;
+}
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
