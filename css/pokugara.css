@@ -35,7 +35,7 @@ p {
   }
 }
 a {
-  color: #28c3ab;
+  color: #968a50;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -43,7 +43,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #176e61;
+  color: #534d2d;
 }
 .light {
   font-weight: 400;
@@ -245,16 +245,16 @@ a:focus {
   transition: all 0.3s ease-in-out;
 }
 .btn-default {
-  border: 1px solid #28c3ab;
-  color: #28c3ab;
+  border: 1px solid #968a50;
+  color: #968a50;
   background-color: transparent;
 }
 .btn-default:hover,
 .btn-default:focus {
-  border: 1px solid #28c3ab;
+  border: 1px solid #968a50;
   outline: none;
   color: #cbc1b2;
-  background-color: #28c3ab;
+  background-color: #968a50;
 }
 .btn-huge {
   padding: 25px;
