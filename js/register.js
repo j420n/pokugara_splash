@@ -1,6 +1,10 @@
 var request;
 $(document).ready(function () {
+    $('btnRegister').click( function () {
+        $('#register-form').submit();
+    });
     RegisterInterest = function () {
+        $("#btnRegister").button('loading');
         // abort any pending request
         if (request) {
             request.abort();
