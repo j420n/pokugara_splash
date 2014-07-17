@@ -76,4 +76,13 @@ var myOptions = {
 
 var map = new google.maps.Map(document.getElementById('map'), myOptions);
 
+// Add logo to map
+// lat/long calculated with http://googlemapsapi.blogspot.co.uk/2007/05/v280-making-image-overlays-easy-with.html
+var pointSW = new google.maps.LatLng(-17.770593,31.070537);
+var pointNE = new google.maps.LatLng(-17.768897,31.073842);
 
+var groundOverlay = new google.maps.GroundOverlay(
+    "http://placekitten.com/200/150",
+    new google.maps.LatLngBounds(pointSW, pointNE));
+
+groundOverlay.setMap(map);
