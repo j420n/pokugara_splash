@@ -236,6 +236,9 @@ a:focus {
 .form-control {
   margin-bottom: 12px;
 }
+label {
+  display: block;
+}
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
