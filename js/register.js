@@ -3,8 +3,16 @@ $(document).ready(function () {
     $('btnRegister').click( function () {
         $('#register-form').submit();
     });
+    $('#facebook-button').click( function () {
+        ga('send', 'event', 'button', 'click', 'facebook');
+    });
+    $('#twitter-button').click( function () {
+        ga('send', 'event', 'button', 'click', 'twitter');
+    });
+    
     RegisterInterest = function () {
         $("#btnRegister").button('loading');
+        ga('send', 'event', 'button', 'click', 'interest');
         // abort any pending request
         if (request) {
             request.abort();
