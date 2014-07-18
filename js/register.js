@@ -56,7 +56,13 @@ $(document).ready(function () {
         });
 
         // prevent default posting of form
-        event.preventDefault();
+        if (event.preventDefault) {
+            event.preventDefault();
+        } else {
+            event.returnValue = false;
+        }
+
+
     }
     $('#register-form').validate({ // initialize the plugin
         submitHandler: RegisterInterest,
