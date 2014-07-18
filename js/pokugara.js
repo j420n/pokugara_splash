@@ -18,10 +18,13 @@ $(function() {
     });
 });
 
+var northOrigin = -17.771954;
+var westOrigin = 31.072450;
+
 //Google Map Skin - Get more at http://snazzymaps.com/
 var myOptions = {
-    zoom: 13,
-    center: new google.maps.LatLng(-17.787348, 31.083841),
+    zoom: 16,
+    center: new google.maps.LatLng(northOrigin, westOrigin),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true,
     styles: [
@@ -73,18 +76,15 @@ var myOptions = {
         ]}
     ]
 };
-
 var map = new google.maps.Map(document.getElementById('map'), myOptions);
 
 // Add logo to map
 // lat/long calculated with http://googlemapsapi.blogspot.co.uk/2007/05/v280-making-image-overlays-easy-with.html
 var offset = 0.0068;
 
-var northOrigin = -17.771954;
 var southBound = northOrigin - (offset / 2);
 var northBound = northOrigin + (offset / 2);
 
-var westOrigin = 31.072450;
 var westBound = westOrigin - (offset / 2);
 var eastBound = westOrigin + (offset / 2);
 
