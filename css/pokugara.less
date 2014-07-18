@@ -1,7 +1,7 @@
 // Variables
 
 @primary: #968a50;
-@dark: #cbc1b2;
+@bg-colour: #cbc1b2;
 @light: #968a50;
 
 // LESS
@@ -11,7 +11,7 @@ body {
     height: 100%;
     font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: @light;
-    background-color: @dark;
+    background-color: @bg-colour;
 }
 
 html {
@@ -72,7 +72,7 @@ a:focus {
     border-bottom: 1px solid rgba(255,255,255,0.3);
     text-transform: uppercase;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: @dark;
+    background-color: @bg-colour;
 }
 
 .navbar-brand {
@@ -124,7 +124,7 @@ a:focus {
 
     .top-nav-collapse {
         padding: 0;
-        background-color: @dark;
+        background-color: @bg-colour;
     }
 
     .navbar-custom.top-nav-collapse {
@@ -141,46 +141,82 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: @light;
-    //background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-    background-color: @dark;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+     background-image: url('../img/pokugara-logo-text.png');
+     background-repeat: no-repeat;
+     background-position-x: center;
+     background-position-y: 100px;
+     background-size: 400px ;
+
+
+     background-color: @bg-colour;
 }
 
 .intro-body {
     display: table-cell;
     vertical-align: middle;
+
 }
 
 .brand-heading {
-    font-size: 40px;
-    text-indent: 100%;
+    color: @bg-colour;
     white-space: nowrap;
     overflow: hidden;
-    background-image: url('../img/pokugara-logo-text.png');
-    background-size: 100%;
-    height: 339px;
-    margin-top: 50px;
+    margin-top:-100px;
 }
 
 .intro-text {
-    font-size: 18px;
+    font-size: 20px;
+    margin-top: 270px;
 }
 
 @media(min-width:767px) {
     .intro {
         height: 100%;
         padding: 0;
+        background-size: 700px 350px;
     }
 
     .brand-heading {
-        font-size: 100px;
+        color: @bg-colour;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-top: -60px;
     }
-
     .intro-text {
         font-size: 25px;
+        margin-top:500px;
+    }
+    .intro-body {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+@media(max-width:480px) {
+    .intro {
+        height: 100%;
+        padding: 0;
+        background-size: 200px 100px;
+        background-position-x: center;
+        background-position-y: 100px;
+    }
+
+    .navbar-brand{
+    font-size:16px;
+    }
+    .brand-heading {
+             color: @bg-colour;
+             white-space: nowrap;
+             overflow: hidden;
+             margin-top: -160px;
+         }
+    .intro-text {
+        font-size: 18px;
+        margin-top:350px;
+    }
+    .intro-body {
+        display: table-cell;
+        vertical-align: middle;
     }
 }
 
@@ -271,13 +307,6 @@ a:focus {
 }
 
 @media(min-width:767px) {
-    .content-section {
-        padding-top: 250px;
-    }
-
-    .download-section {
-        padding: 100px 0;
-    }
 
     #map {
         height: 400px;
@@ -319,7 +348,7 @@ label {
 .btn-default:focus {
     border: 1px solid @primary;
     outline: none;
-    color: @dark;
+    color: @bg-colour;
     background-color: @primary;
 }
 
