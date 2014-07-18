@@ -3,6 +3,7 @@
   background-size: contain ;
   height: 400px;
   margin: auto;
+  background-image: none;
 }
 .intro-text {
   font-size: 25px;
