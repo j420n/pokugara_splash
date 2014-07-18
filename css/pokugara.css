@@ -120,7 +120,7 @@ a:focus {
   vertical-align: middle;
 }
 .brand-heading {
-  font-size: 40px;
+  font-size: 100px;
   color: #cbc1b2;
   white-space: nowrap;
   overflow: hidden;
@@ -146,6 +146,30 @@ a:focus {
   .intro-text {
     font-size: 25px;
     margin-top: 500px;
+  }
+  .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+@media (max-width: 480px) {
+  .intro {
+    height: 100%;
+    padding: 0;
+    background-size: 200px 100px;
+  }
+  .navbar-brand {
+    font-size: 16px;
+  }
+  .brand-heading {
+    color: #cbc1b2;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: -160px;
+  }
+  .intro-text {
+    font-size: 18px;
+    margin-top: 120px;
   }
   .intro-body {
     display: table-cell;
