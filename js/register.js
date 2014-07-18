@@ -9,13 +9,19 @@ $(document).ready(function () {
     $('#twitter-button').click( function () {
         ga('send', 'event', 'button', 'click', 'twitter');
     });
-    
+
     RegisterInterest = function () {
         $("#btnRegister").button('loading');
         ga('send', 'event', 'button', 'click', 'interest');
         // abort any pending request
         if (request) {
             request.abort();
+        }
+        // prevent default posting of form
+        if (event.preventDefault) {
+            event.preventDefault();
+        } else {
+            event.returnValue = false;
         }
 
         var $form = $('#register-form');
@@ -26,13 +32,21 @@ $(document).ready(function () {
         // (note: we disable elements AFTER the form data has been serialized. Disabled form elements will not be serialized)
         $inputs.prop("disabled", true);
 
+
         request = $.ajax({
             url: "https://script.google.com/macros/s/AKfycbxBodnzSduWj3ah55EFIziHgJitPvOmBNfbfb45fpe_Pjcmf_5f/exec",
             type: "post",
             data: serializedData,
-            crossDomain: true
+            success: function(data) {
+                console.log(responseType.toUpperCase() + ' received via ' + requestMethod + '\n' + data);
+            }
+
+        });
+        request.error( function(jqXHR, textStatus) {
+            alert(textStatus);
         });
 
+/*
 
         // callback handler that will be called on success
         request.done(function (response, textStatus, jqXHR){
@@ -54,14 +68,9 @@ $(document).ready(function () {
         request.always(function () {
             // re-enable the inputs
             $inputs.prop("disabled", false);
-        });
+        });*/
 
-        // prevent default posting of form
-        if (event.preventDefault) {
-            event.preventDefault();
-        } else {
-            event.returnValue = false;
-        }
+
 
 
     }

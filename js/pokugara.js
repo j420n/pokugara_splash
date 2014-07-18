@@ -96,3 +96,6 @@ var groundOverlay = new google.maps.GroundOverlay(
     new google.maps.LatLngBounds(pointSW, pointNE));
 
 groundOverlay.setMap(map);
+
+
+
