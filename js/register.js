@@ -29,7 +29,8 @@ $(document).ready(function () {
         request = $.ajax({
             url: "https://script.google.com/macros/s/AKfycbxBodnzSduWj3ah55EFIziHgJitPvOmBNfbfb45fpe_Pjcmf_5f/exec",
             type: "post",
-            data: serializedData
+            data: serializedData,
+            crossDomain: true
         });
 
 
