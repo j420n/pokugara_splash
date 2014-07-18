@@ -62,7 +62,7 @@ $(document).ready(function () {
         submitHandler: RegisterInterest,
         rules: {
             name: {
-                required: true,
+                required: true
             },
             email: {
                 required: true,
