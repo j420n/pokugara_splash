@@ -11,7 +11,6 @@ $(document).ready(function () {
     });
     
     RegisterInterest = function () {
-        $.support.cors = true;
         $("#btnRegister").button('loading');
         ga('send', 'event', 'button', 'click', 'interest');
         // abort any pending request
