@@ -11,6 +11,7 @@ $(document).ready(function () {
     });
     
     RegisterInterest = function () {
+        $.support.cors = true;
         $("#btnRegister").button('loading');
         ga('send', 'event', 'button', 'click', 'interest');
         // abort any pending request
@@ -29,6 +30,7 @@ $(document).ready(function () {
         request = $.ajax({
             url: "https://script.google.com/macros/s/AKfycbxBodnzSduWj3ah55EFIziHgJitPvOmBNfbfb45fpe_Pjcmf_5f/exec",
             type: "post",
+            crossDomain: true,
             data: serializedData
         });
 
@@ -56,13 +58,16 @@ $(document).ready(function () {
         });
 
         // prevent default posting of form
-        event.preventDefault();
+        if (event.preventDefault)
+            event.preventDefault();
+        else
+            event.returnValue = false;
     }
     $('#register-form').validate({ // initialize the plugin
         submitHandler: RegisterInterest,
         rules: {
             name: {
-                required: true,
+                required: true
             },
             email: {
                 required: true,
