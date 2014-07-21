@@ -29,7 +29,7 @@ $(document).ready(function () {
         request = $.ajax({
             url: "https://script.google.com/macros/s/AKfycbxBodnzSduWj3ah55EFIziHgJitPvOmBNfbfb45fpe_Pjcmf_5f/exec",
             type: "post",
-            contentType: 'text/plain',
+            contentType: 'application/x-www-form-urlencoded',
             crossDomain: true,
             data: serializedData
         });
