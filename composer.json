@@ -1,0 +1,6 @@
+{
+    "require": {
+        "guzzle/guzzle": "~3.9",
+        "vendor/autoload.php": "dev"
+    }
+}
