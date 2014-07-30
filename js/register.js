@@ -27,7 +27,7 @@ $(document).ready(function () {
         $inputs.prop("disabled", true);
 
         request = $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbxBodnzSduWj3ah55EFIziHgJitPvOmBNfbfb45fpe_Pjcmf_5f/exec",
+            url: "form.php",
             type: "post",
             data: serializedData
         });
