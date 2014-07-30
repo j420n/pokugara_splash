@@ -29,23 +29,15 @@ $(document).ready(function () {
         request = $.ajax({
             url: "form.php",
             type: "post",
-            data: serializedData
-        });
-
-
-        // callback handler that will be called on success
-        request.done(function (response, textStatus, jqXHR){
-            $('#register-form').fadeOut( 1600, function () {
-                $("#thanks").removeClass('hidden');
-            });
-        });
-
-        // callback handler that will be called on failure
-        request.fail(function (jqXHR, textStatus, errorThrown){
-            // log the error to the console
-            console.error(
-                "The following error occurred: " + textStatus, errorThrown
-            );
+            data: serializedData,
+            success: function(){
+                $('#register-form').fadeOut( 1600, function () {
+                    $("#thanks").removeClass('hidden');
+                });
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert("Status: " + textStatus); alert("Error: " + errorThrown);
+            }
         });
 
         // callback handler that will be called regardless
