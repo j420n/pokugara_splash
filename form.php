@@ -13,7 +13,8 @@ $client = new Client();
 $request = $client->post('https://script.google.com/macros/s/AKfycbxBodnzSduWj3ah55EFIziHgJitPvOmBNfbfb45fpe_Pjcmf_5f/exec')
     ->setPostField('name', $name)
     ->setPostField('email', $email)
-    ->setPostField('tel', $tel);
+    ->setPostField('tel', $tel)
+    ->setPostField('timestamp', date("d/m/Y H:i:s"));
 
 $response = $request->send();
 
