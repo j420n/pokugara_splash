@@ -44,5 +44,33 @@ $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 // Additional headers
 $headers .= 'From: Pokugara Residential Estate <donotreply@pokugara.co.zw>' . "\r\n";
 
-// Mail it
+// Mail it to the Interested Person
 mail($email, $subject, $message, $headers);
+
+//Change the subject and message
+
+$subject1 = 'Someone is interested in Pokugara';
+
+$message1 = '
+<html>
+<head>
+  <title>Pokugara Residential Estate.</title>
+</head>
+<body>
+  <p>Someone has registered their interest at pokugara.co.zw</p>
+  <p>To look at the full list of people who are interested click here(You must be signed into google)<a href="https://docs.google.com/spreadsheets/d/1RK1fflxvcjHWl5XT7DkpV1q7093w3RHdZw4HycPlYwM/edit#gid=0">CLICK HERE</a></p>
+
+</body>
+</html>
+';
+
+
+// Mail it to the Kerry Stubbs
+$Kerry = "kstubbs@westpropertyzim.com";
+
+mail($Kerry, $subject1, $message1, $headers);
+
+// Mail it to the Rachel
+$Rachel = "rachel@west.co.zw";
+
+mail($Rachel, $subject1, $message1, $headers);
