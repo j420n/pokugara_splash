@@ -42,7 +42,7 @@ $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
 // Additional headers
-$headers .= 'From: Pokugara Residential Estate <donotreply@pokugara.co.zw>' . "\r\n";
+$headers .= 'From: Pokugara Residential Estate <webmaster@pokugara.co.zw>' . "\r\n";
 
 // Mail it to the Interested Person
 mail($email, $subject, $message, $headers);
